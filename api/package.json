@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/renvieir/task-manager/issues"
   },
-  "homepage": "https://github.com/renvieir/task-manager#readme"
+  "homepage": "https://github.com/renvieir/task-manager#readme",
+  "devDependencies": {
+    "@types/node": "^14.14.41",
+    "typescript": "^4.2.4"
+  }
 }
