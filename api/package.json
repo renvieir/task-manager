@@ -1,0 +1,24 @@
+{
+  "name": "task-manager-api",
+  "version": "1.0.0",
+  "description": "multi-user task manager api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/renvieir/task-manager.git"
+  },
+  "keywords": [
+    "tasks",
+    "task manager",
+    "todo list"
+  ],
+  "author": "Renato Vieira <renato.pacheco.r2@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/renvieir/task-manager/issues"
+  },
+  "homepage": "https://github.com/renvieir/task-manager#readme"
+}
