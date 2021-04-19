@@ -7,4 +7,5 @@ module.exports = {
   transform: {
     ".+\\.ts$": "ts-jest",
   },
+  modulePaths: ["<rootDir>/src/"],
 };
