@@ -7,8 +7,8 @@ import {
   HttpRequest,
   HttpResponse,
 } from "./protocols";
-import { InvalidParamError, MissingParamError } from "../../errors";
-import { badRequest, created, serverError } from "../../helpers/http";
+import { InvalidParamError, MissingParamError } from "presentation/errors";
+import { badRequest, created, serverError } from "presentation/helpers/http";
 
 export const requiredFields = [
   "name",

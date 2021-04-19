@@ -8,7 +8,7 @@ import {
 import {
   accountData,
   accountModel,
-} from "../../../presentation/controllers/signup/mocks";
+} from "presentation/controllers/signup/mocks";
 import { DbAddAccount } from ".";
 
 interface SutTypes {
