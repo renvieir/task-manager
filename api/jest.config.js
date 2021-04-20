@@ -1,12 +1,13 @@
+const { defaults: tsjPreset } = require("ts-jest/presets");
+
 module.exports = {
-  collectCoverageFrom: ["<rootDir>/src/**/**.ts"],
-  coverageDirectory: "coverage",
-  coverageProvider: "v8",
   roots: ["<rootDir>/src"],
+  collectCoverageFrom: ["<rootDir>/src/**/**.ts", "!<rootDir>/src/main/**"],
+  coverageDirectory: "coverage",
   testEnvironment: "node",
+  preset: "@shelf/jest-mongodb",
   transform: {
-    ".+\\.ts$": "ts-jest",
+    ...tsjPreset.transform,
   },
   modulePaths: ["<rootDir>/src/"],
-  preset: "@shelf/jest-mongodb",
 };
