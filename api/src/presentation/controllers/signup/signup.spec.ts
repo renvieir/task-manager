@@ -1,5 +1,10 @@
 import { requiredFields } from ".";
-import { accountData, accountModel, makeSut } from "./mocks";
+import {
+  accountData,
+  accountRequestData,
+  accountModel,
+  makeSut,
+} from "./mocks";
 import {
   MissingParamError,
   InvalidParamError,
@@ -13,8 +18,7 @@ describe("SignUpController", () => {
       const { sut } = makeSut();
       const httpRequest = {
         body: {
-          ...accountData,
-          passwordConfirmation: accountData.password,
+          ...accountRequestData,
           [param]: "",
         },
       };
@@ -33,8 +37,7 @@ describe("SignUpController", () => {
       .mockReturnValueOnce(false);
     const httpRequest = {
       body: {
-        ...accountData,
-        passwordConfirmation: accountData.password,
+        ...accountRequestData,
         email: "invalid",
       },
     };
@@ -66,8 +69,7 @@ describe("SignUpController", () => {
     jest.spyOn(emailValidatorStub, "isValid").mockReturnValueOnce(false);
     const httpRequest = {
       body: {
-        ...accountData,
-        passwordConfirmation: accountData.password,
+        ...accountRequestData,
         email: "invalid",
       },
     };
@@ -87,8 +89,7 @@ describe("SignUpController", () => {
       });
     const httpRequest = {
       body: {
-        ...accountData,
-        passwordConfirmation: accountData.password,
+        ...accountRequestData,
         email: "invalid",
       },
     };
@@ -104,8 +105,7 @@ describe("SignUpController", () => {
     const spy = jest.spyOn(addAccountStub, "add");
     const httpRequest = {
       body: {
-        ...accountData,
-        passwordConfirmation: accountData.password,
+        ...accountRequestData,
       },
     };
 
@@ -123,8 +123,7 @@ describe("SignUpController", () => {
       );
     const httpRequest = {
       body: {
-        ...accountData,
-        passwordConfirmation: accountData.password,
+        ...accountRequestData,
       },
     };
 
@@ -138,8 +137,7 @@ describe("SignUpController", () => {
     const { sut } = makeSut();
     const httpRequest = {
       body: {
-        ...accountData,
-        passwordConfirmation: accountData.password,
+        ...accountRequestData,
       },
     };
 

@@ -14,6 +14,11 @@ export const accountData = {
   password: faker.internet.password(),
 };
 
+export const accountRequestData = {
+  ...accountData,
+  passwordConfirmation: accountData.password,
+};
+
 export const accountModel = {
   ...accountData,
   id: faker.datatype.uuid(),
