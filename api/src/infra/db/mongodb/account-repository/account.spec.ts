@@ -8,7 +8,7 @@ describe("Name of the group", () => {
   });
 
   beforeEach(async () => {
-    const collection = MongoHelper.getColllection(
+    const collection = await MongoHelper.getColllection(
       AccountMongoRepository.COLLECTION_NAME
     );
     await collection.deleteMany({});
