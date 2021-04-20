@@ -8,4 +8,5 @@ module.exports = {
     ".+\\.ts$": "ts-jest",
   },
   modulePaths: ["<rootDir>/src/"],
+  preset: "@shelf/jest-mongodb",
 };
