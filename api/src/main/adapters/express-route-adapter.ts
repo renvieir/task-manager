@@ -12,5 +12,10 @@ export const adaptRoute = (
   };
   const httpResponse = await controller.handle(httpRequest);
   const { statusCode, body } = httpResponse;
-  res.status(statusCode).json(body);
+
+  if (statusCode !== 500) {
+    res.status(statusCode).json(body);
+  } else {
+    res.status(statusCode).json({ error: body.message });
+  }
 };
