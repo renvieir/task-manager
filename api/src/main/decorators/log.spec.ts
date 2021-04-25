@@ -12,7 +12,7 @@ interface SutTypes {
 
 const makeLogErrorRepository = (): LogErrorRepository => {
   class LogErrorRepositoryStub implements LogErrorRepository {
-    async log(stack: string): Promise<void> {
+    async log(error: Error): Promise<void> {
       return Promise.resolve();
     }
   }
@@ -73,6 +73,6 @@ describe("LogController Decorator", () => {
 
     await sut.handle(httpRequest);
 
-    expect(spy).toHaveBeenCalledWith("stack");
+    expect(spy).toHaveBeenCalledWith(error.body);
   });
 });
